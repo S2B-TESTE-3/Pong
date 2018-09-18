@@ -5,6 +5,8 @@
  *  Read the file 'COPYING' for more information
  */
 
+ package pucrs.s2b.pong;
+ 
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
@@ -15,7 +17,7 @@ public class PongWindow extends JFrame {
 		setTitle ("Pong");
 		setSize (640, 480);
 		
-		Pong content = new Pong (Player.CPU_HARD, Player.CPU_EASY);
+		Pong content = new Pong (Player.KEYBOARD, Player.CPU_EASY);
 		content.acceleration = true;
 		getContentPane ().add (content);
 		

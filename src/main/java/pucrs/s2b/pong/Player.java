@@ -4,6 +4,8 @@
  *  This file is released under the GPLv2
  *  Read the file 'COPYING' for more information
  */
+ 
+ package pucrs.s2b.pong;
 
 import javax.swing.JOptionPane;
 
@@ -22,7 +24,7 @@ public class Player {
 	public Player (int type) {
 		if (type < 0 || type > 3) {
 			type = CPU_EASY;
-			JOptionPane.showMessageDialog (null, "Some errors in player definition");
+			//JOptionPane.showMessageDialog (null, "Some errors in player definition");
 		}
 		this.type = type;
 	}

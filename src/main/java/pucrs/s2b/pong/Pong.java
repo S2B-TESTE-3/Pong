@@ -4,6 +4,8 @@
  *  This file is released under the GPLv2
  *  Read the file 'COPYING' for more information
  */
+ 
+ package pucrs.s2b.pong;
 
 import javax.swing.JPanel;
 import java.awt.Color;
@@ -190,6 +192,9 @@ public class Pong extends JPanel implements ActionListener, MouseListener, KeyLi
 			else {
 				player2.points ++;
 				new_game = true;
+				if (player2.points == 15) {
+					
+				}
 			}
 		}
 		
@@ -208,6 +213,9 @@ public class Pong extends JPanel implements ActionListener, MouseListener, KeyLi
 			else {
 				player1.points ++;
 				new_game = true;
+				if (player1.points == 15) {
+					
+				}
 			}
 		}
 		
@@ -280,4 +288,12 @@ public class Pong extends JPanel implements ActionListener, MouseListener, KeyLi
 	
 	// Key released
 	public void keyTyped (KeyEvent e) {}
+
+	public boolean isEndGame() {
+		return player1.points >= 15 || player2.points >= 15;
+	}
+	
+	public Player getPlayer1() {
+		return player1;
+	}
 }

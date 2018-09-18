@@ -5,9 +5,11 @@
  *  Read the file 'COPYING' for more information
  */
 
+ package pucrs.s2b.pong;
+ 
 import javax.swing.JFrame;
 
-public class Test {
+public class PongApp{
 	public static void main (String[] args) {
 		PongWindow window = new PongWindow ();
 		window.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
